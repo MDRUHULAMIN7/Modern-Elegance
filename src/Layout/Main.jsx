@@ -10,7 +10,7 @@ import { Outlet } from "react-router-dom";
 
 const Main = () => {
     return (
-        <div className="mt-2 p-1">
+        <div className="">
 
             
          <p>header</p>
