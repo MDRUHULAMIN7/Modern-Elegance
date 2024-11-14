@@ -1,3 +1,4 @@
+import About from "../Components/About";
 import Banner from "../Components/Banner";
 
 const Home=()=>{
@@ -6,6 +7,7 @@ const Home=()=>{
 
         <section>
             <Banner></Banner>
+            <About></About>
         </section>
     )
 }
