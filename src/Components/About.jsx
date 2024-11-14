@@ -63,7 +63,7 @@ const About = () => {
               <img src={current.image} alt="About Slide" />
             </div>
 
-            <div className="absolute left-[61.8%]">
+            <div className="absolute left-[61.5%]">
               <div className="relative mx-auto">
                 {/* Circular Border */}
                 <div
@@ -102,7 +102,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/3 mt-4 md:mt-[200px] space-y-6">
+        <div className="w-full md:w-1/3 mt-8 md:mt-[224px]  space-y-6">
           <h5 className="text-xl">{current.title}</h5>
           <p className="text-sm">{current.description}</p>
           <button className="px-8 py-4 bg-[#000000] uppercase text-white text-xs rounded-sm transition">

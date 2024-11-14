@@ -1,5 +1,6 @@
 import About from "../Components/About";
 import Banner from "../Components/Banner";
+import Projects from "../Components/Project";
 
 const Home=()=>{
 
@@ -8,6 +9,8 @@ const Home=()=>{
         <section>
             <Banner></Banner>
             <About></About>
+
+            <Projects></Projects>
         </section>
     )
 }
