@@ -81,7 +81,7 @@ const Header = () => {
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
             <a
-              className={`flex items-center gap-x-1 ${
+              className={`flex items-center  ${
                 isDropdownOpen ? "text-[#EA4715]" : ""
               }`}
             >
