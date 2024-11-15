@@ -10,22 +10,22 @@ const Blog = () => {
     {
       title: "Window",
       image: "https://res.cloudinary.com/dpomtzref/image/upload/v1731661620/blog1_ib4snh.png",
-      content: "consectetur adipiscing elit",
+      content: "consectetur adipiscing elit .",
     },
     {
       title: "Window",
       image: "https://res.cloudinary.com/dpomtzref/image/upload/v1731661495/blog2_ckq8g1.png",
-      content: "Lorem ipsum dolor sit amet",
+      content: "Integer quis auctor elit .",
     },
     {
       title: "Window",
       image: "https://res.cloudinary.com/dpomtzref/image/upload/v1731661447/DALL_E_2024-11-15_15.04.20_-_A_cozy_indoor_setting_with_two_people_sitting_together_on_the_stairs_of_a_modern_home._They_are_casually_dressed_smiling_and_using_a_laptop_togethe_zjchmx.webp",
-      content: "Lorem ipsum dolor sit amet adipiscing elit.",
+      content: "Sed vulputate mi sit amet mauris.",
     },
     {
         title: "Window",
         image: "https://res.cloudinary.com/dpomtzref/image/upload/v1731661620/blog1_ib4snh.png",
-        content: "consectetur adipiscing elit",
+        content: " Pellentesque sit amet porttitor eget.",
       },
   ];
 

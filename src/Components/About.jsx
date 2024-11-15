@@ -8,31 +8,31 @@ const About = () => {
       number: 1,
       title: `Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Mauris pharetra et ultrices neque ornare aenean euismod. Quis varius quam quisque id diam vel quam elementum.",
     },
     {
       image:
         "https://res.cloudinary.com/dpomtzref/image/upload/v1731549807/about2_mhm152.png",
       number: 2,
-      title: `Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      title: `Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Vulputate odio ut enim blandit volutpat maecenas volutpat.`,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Sed euismod nisi porta lorem mollis aliquam ut porttitor. In fermentum et sollicitudin ac orci phasellus egestas tellus..",
     },
     {
       image:
         "https://res.cloudinary.com/dpomtzref/image/upload/v1731549470/about1_egnxwt.png",
       number: 3,
-      title: `Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      title: `Tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus.`,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Vivamus arcu felis bibendum ut tristique et egestas. Egestas integer eget aliquet risus feugiat in ante metus.",
     },
     {
       image:
         "https://res.cloudinary.com/dpomtzref/image/upload/v1731549807/about2_mhm152.png",
       number: 4,
-      title: `Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      title: `Vivamus at augue eget arcu dictum varius duis at consectetur. Massa massa ultricies mi quis hendrerit dolor magna eget.`,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "At augue eget arcu dictum varius duis at consectetur. At elementum eu facilisis sed. Ut tristique et egestas quis.",
     },
   ];
 
@@ -49,10 +49,8 @@ const About = () => {
       <div>
         <h1 className="text-center text-4xl font-medium">About us</h1>
         <p className="text-center text-base mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut
-          <br className="hidden md:block" /> labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation.
+        Urna id volutpat lacus laoreet non curabitur gravida arcu ac. Erat nam at lectus urna duis 
+          <br className="hidden md:block" /> at lectus urna duis convallis  at lectus urna .
         </p>
       </div>
 

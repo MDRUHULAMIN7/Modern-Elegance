@@ -28,7 +28,7 @@ const Projects = () => {
             <div className="h-1/2 p-4">
               <h1 className="text-white text-xl">Residential</h1>
               <p className="mt-3 text-sm opacity-70 text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              In hac habitasse platea dictumst quisque egestas.
               </p>
               <hr className="opacity-30 my-4 text-[#494949]" />
               <p className="text-xs opacity-70 text-white">928 367 3789</p>
@@ -58,7 +58,7 @@ const Projects = () => {
             <div className="h-1/2 p-4">
               <h1 className="text-white text-xl">Commercial</h1>
               <p className="mt-3 text-sm opacity-70 text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Ipsum dolor sit amet consectetur adipiscing elit.
               </p>
               <hr className="opacity-30 my-4 text-[#494949]" />
               <p className="text-xs opacity-70 text-white">928 367 3789</p>
@@ -88,7 +88,7 @@ const Projects = () => {
             <div className="h-1/2 p-4">
               <h1 className="text-white text-xl">Duplex</h1>
               <p className="mt-3 text-sm opacity-70 text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Amet consectetur adipiscing elit duis tristique .
               </p>
               <hr className="opacity-30 my-4 text-[#494949]" />
               <p className="text-xs opacity-70 text-white">928 367 3789</p>
