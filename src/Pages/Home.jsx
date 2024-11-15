@@ -1,6 +1,8 @@
 import About from "../Components/About";
 import Banner from "../Components/Banner";
 import Blog from "../Components/Blog";
+import Branches from "../Components/Branches";
+
 import Projects from "../Components/Project";
 
 const Home=()=>{
@@ -14,6 +16,8 @@ const Home=()=>{
             <Projects></Projects>
 
             <Blog></Blog>
+
+            <Branches></Branches>
         </section>
     )
 }

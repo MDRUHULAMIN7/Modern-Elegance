@@ -19,7 +19,7 @@ const Header = () => {
       }`}
     >
       
-      <div className="flex justify-between items-center border-b border-gray-300 md:px-32 px-4 py-2">
+      <div className="flex justify-between items-center border-b border-gray-300 md:px-32 px-4 ">
         <div>
           <p className="flex items-center gap-x-2 text-xs md:text-sm">
             <IoCallOutline
@@ -123,16 +123,16 @@ const Header = () => {
 
       {/* Mega Menu */}
       <div
-        className={`absolute top-full left-0 w-full bg-white text-gray-900 shadow-lg z-40 overflow-hidden ${
-          isDropdownOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        className={`absolute top-full left-0 w-full bg-white  border-t text-gray-900 shadow-lg z-40 overflow-hidden ${
+          isDropdownOpen ? "max-h-[490px] opacity-100" : "max-h-0 opacity-0"
         } transition-all duration-700 ease-in-out transform ${
           isDropdownOpen ? "translate-y-0" : "-translate-y-4"
         }`}
         onMouseEnter={openDropdown}
         onMouseLeave={closeDropdown}
       >
-        <div className="flex flex-col md:flex-row justify-between p-4 gap-x-20 md:px-16">
-          <div className="flex flex-col md:flex-row w-full md:w-3/5 justify-between md:px-16">
+        <div className="flex flex-col md:flex-row justify-between px-4  gap-x-20 md:px-16">
+          <div className="flex flex-col md:flex-row w-full pt-3 md:w-3/5 justify-between md:px-16">
          
             <div className="mb-6 md:mb-0">
               <p className="font-bold mb-6">By Size</p>
@@ -167,7 +167,7 @@ const Header = () => {
           </div>
 
          
-          <div className="relative w-full md:w-2/5">
+          <div className="relative w-full md:w-2/5 h-full">
             <img
               src="https://res.cloudinary.com/dpomtzref/image/upload/v1731658760/Image_ncepdn.png"
               alt="Bifold"

@@ -1,6 +1,7 @@
 
 import { Outlet } from "react-router-dom";
 import Header from "../Pages/shared/Header";
+import Foter from "../Pages/shared/Foter";
 
 
 
@@ -16,7 +17,7 @@ const Main = () => {
             
         <Header></Header>
             <Outlet></Outlet>
-            <p>footer</p>
+            <Foter></Foter>
             
         </div>
     );
