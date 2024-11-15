@@ -5,6 +5,8 @@ import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
+import logo from "../../../public/logo.png"
+
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +43,7 @@ const Header = () => {
     
       <div className="flex justify-between items-center py-4 md:px-32 px-4">
       
-        <div className="text-2xl md:text-3xl font-medium uppercase">Logo</div>
+        <div className="text-2xl md:text-3xl font-medium uppercase"><img className="h-12" src={logo} alt="" /></div>
 
       
         <div className="md:hidden">
