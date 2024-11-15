@@ -1,107 +1,87 @@
-import { useState, useEffect } from 'react';
-import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
+import { useState } from 'react';
 
 const Branches = () => {
-  const [geoData, setGeoData] = useState(null); // State for storing GeoJSON data
-  const [selectedBranch, setSelectedBranch] = useState(null); // State for selected branch
+  const [selectedBranch, setSelectedBranch] = useState(null);
+  const [activeBranchIndex, setActiveBranchIndex] = useState(null); 
 
-  // Sample branch data with geographic coordinates
+
   const branches = [
     {
       name: "Dhanmondi Branch",
       address: "Green Plaza, 4th Floor Plot-8, Road-5/A Satmasjid Road, Dhanmondi, Dhaka-1209",
       phone: "+880-2-000000",
       mobile: "+8801234567890",
-      coordinates: [90.374, 23.746]
+      style: { top: '50%', left: '45%' },
     },
     {
       name: "Motijheel Branch",
-      address: "Reiken Bhaban, 2nd Floor Room No 201, Motijheel, Dhaka-1000",
+      address: "Rokon Bhaban, 2nd Floor Room No 205, 49 Motijheel C/A Dhaka-1000",
       phone: "+880-2-111111",
       mobile: "+8801234567891",
-      coordinates: [90.4125, 23.7315]
-    },
-    {
-      name: "Chittagong Branch",
-      address: "Some Building, 3rd Floor, Chittagong",
-      phone: "+880-31-000000",
-      mobile: "+8801234567892",
-      coordinates: [91.8317, 22.3569]
+      style: { top: '55%', left: '50%' },
     },
   ];
 
-  // Fetch GeoJSON data from the public folder
-  useEffect(() => {
-    fetch('/bangladesh-districts.json')
-      .then((response) => response.json())
-      .then((data) => setGeoData(data))
-      .catch((error) => console.error("Error loading GeoJSON data:", error));
-  }, []);
-
-  const handleMarkerClick = (branch) => {
+  const handleMouseEnter = (branch, index) => {
     setSelectedBranch(branch);
+    setActiveBranchIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveBranchIndex(null); 
   };
 
   return (
     <section className="bg-[#F6F6F6] py-10">
       <h1 className="text-center text-3xl">Our Branches</h1>
       <p className="text-center text-[15px] md:w-1/2 mx-auto pt-5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation.
+        Explore our wide range of branches across the country, offering exceptional customer service and convenient locations for all your needs.
       </p>
 
-      {/* Map Section */}
-      <div className="flex justify-center mt-8">
-        <ComposableMap
-          projection="geoMercator"
-          projectionConfig={{
-            center: [90.5, 23.7],  // Center the projection on Bangladesh
-            scale: 3000            // Adjust scale to fit Bangladesh map properly
-          }}
-          width={600}
-          height={500}
-        >
-          {/* Render the map only if geoData is available */}
-          {geoData && (
-            <Geographies geography={geoData}>
-              {({ geographies }) =>
-                geographies.map((geo) => (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    fill="#D6D6DA"
-                    stroke="#FFFFFF"
-                    strokeWidth={0.5}
-                  />
-                ))
-              }
-            </Geographies>
-          )}
+      <div className="relative flex justify-center pt-10">
+        <img
+          src="https://i.ibb.co.com/wdTYLys/map-removebg-preview.png"
+          alt="Bangladesh Map"
+          className="w-full max-w-4xl"
+        />
 
-          {/* Add branch markers */}
+        <div className="absolute grid grid-cols-1 gap-4 top-1/3">
           {branches.map((branch, index) => (
-            <Marker
-              key={index}
-              coordinates={branch.coordinates}
-              onClick={() => handleMarkerClick(branch)}
-              style={{ cursor: "pointer" }}
+            <div 
+              key={index} 
+              className="relative"
+              onMouseEnter={() => handleMouseEnter(branch, index)}
+              onMouseLeave={handleMouseLeave}
             >
-              <circle r={6} fill="#FF5533" />
-            </Marker>
-          ))}
-        </ComposableMap>
-      </div>
+              <button
+                className="flex bg-[#FF5533] p-2 rounded-lg flex-col items-center"
+                style={branch.style}
+              >
+                <div className="border-2 border-[#78CFFF] rounded-full shadow-lg relative">
+                  <div className="p-1 bg-white rounded-full">
+                    <img className="h-4" src="https://i.ibb.co.com/HxMkTdf/5468749-booth-callbox-phone-telephone-icon-2.png" alt="" />
+                  </div>
+                </div>
+                <span className="mt-1 text-xs font-semibold text-white px-2 py-1 rounded-full">
+                  {branch.name}
+                </span>
+              </button>
 
-      {/* Branch Info Section */}
-      {selectedBranch && (
-        <div className="mt-6 p-4 bg-white shadow-md rounded-lg max-w-md mx-auto">
-          <h2 className="text-xl font-semibold">{selectedBranch.name}</h2>
-          <p>{selectedBranch.address}</p>
-          <p>Phone: {selectedBranch.phone}</p>
-          <p>Mobile: {selectedBranch.mobile}</p>
+             
+              {activeBranchIndex === index && (
+                <div
+                  className="absolute md:left-32 -left-20 mt-10 md:mt-2 w-60 bg-white z-50 p-4 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform scale-y-100 origin-top"
+                >
+                  <h2 className="text-lg font-semibold text-[#333]">{branch.name}</h2>
+                  <p className="text-gray-600">{branch.address}</p>
+                  <p className="text-gray-600 mt-1">Phone: {branch.phone}</p>
+                  <p className="text-gray-600 mt-1">Mobile: {branch.mobile}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
-      )}
+      </div>
     </section>
   );
 };
