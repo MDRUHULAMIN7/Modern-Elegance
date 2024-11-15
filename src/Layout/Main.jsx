@@ -1,5 +1,6 @@
 
 import { Outlet } from "react-router-dom";
+import Header from "../Pages/shared/Header";
 
 
 
@@ -13,7 +14,7 @@ const Main = () => {
         <div className="">
 
             
-         <p>header</p>
+        <Header></Header>
             <Outlet></Outlet>
             <p>footer</p>
             
